@@ -36,13 +36,13 @@ export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    // Obtener los personajes de la API y asignar un precio único a cada uno
+    
     fetch('https://rickandmortyapi.com/api/character')
       .then((response) => response.json())
       .then((data) => {
         const charactersWithPrices = data.results.map(character => ({
           ...character,
-          price: Math.floor(Math.random() * 100) + 10, // Asigna un precio aleatorio
+          price: Math.floor(Math.random() * 100) + 10, 
         }));
         dispatch({ type: 'SET_CHARACTERS', payload: charactersWithPrices });
       })

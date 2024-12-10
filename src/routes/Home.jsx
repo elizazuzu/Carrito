@@ -1,6 +1,7 @@
+import React from 'react';  
 import { useAppContext } from '../context/AppContext';
 import Card from '../components/Card';
-import Form from '../components/Form'; // Importa el formulario
+import Form from '../components/Form'; 
 
 const Home = () => {
   const { state, dispatch } = useAppContext();
@@ -11,7 +12,7 @@ const Home = () => {
       payload: {
         id: character.id,
         name: character.name,
-        price: character.price, // Usa el precio único de cada personaje
+        price: character.price, 
         image: character.image,
       },
     });

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const ContactForm = () => {
-  // Definir el estado para los campos del formulario
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,7 +10,7 @@ const ContactForm = () => {
 
   const [formStatus, setFormStatus] = useState('');
 
-  // Manejar el cambio de los campos
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -19,21 +19,21 @@ const ContactForm = () => {
     }));
   };
 
-  // Manejar el envío del formulario
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validar los datos del formulario
+    
     if (!formData.name || !formData.email || !formData.message) {
       setFormStatus('Please fill in all fields.');
       return;
     }
 
-    // Simular el envío del formulario
+    
     console.log('Form data submitted:', formData);
     setFormStatus('Thank you for your message! We will get back to you soon.');
 
-    // Limpiar el formulario después del envío
+    
     setFormData({
       name: '',
       email: '',

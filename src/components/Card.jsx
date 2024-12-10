@@ -1,7 +1,7 @@
 
-// src/components/Card.jsx
-import PropTypes from 'prop-types';  // Importar PropTypes
 
+import React from 'react'; 
+import PropTypes from 'prop-types';  
 const Card = ({ character }) => {
   return (
     <div className="card">

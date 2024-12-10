@@ -6,7 +6,7 @@ const AppContext = createContext();
 
 
 export const AppProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light'); // Ejemplo de estado global
+  const [theme, setTheme] = useState('light'); 
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));

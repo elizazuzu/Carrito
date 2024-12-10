@@ -7,7 +7,7 @@ import Cart from './Cart';
 import Favs from './routes/Favs';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Form from './components/Form'; // Importar el formulario
+import Form from './components/Form'; 
 
 const App = () => {
   return (
